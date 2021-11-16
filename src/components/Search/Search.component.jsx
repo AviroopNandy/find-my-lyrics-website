@@ -19,9 +19,24 @@ const Search = () => {
                 console.log(res.data.lyrics);
                 setLyrics(res.data.lyrics);
                 console.log("Lyrics:", lyrics);
+                var html = document.getElementById("lyrics");
+                html.innerHTML = res.data.lyrics.replace(/[\r\n]/g, '<br />');
             }
         })
+        .catch(err => {
+            alert(err);
+        })
     }
+
+    const startOver = (e) => {
+        e.preventDefault();
+        setLyrics({
+            artist: "",
+            song: "",
+        });
+        window.location.reload();
+    }
+
     return (
         <div className={styles.search}>
             <div className={styles.search__searchbar}>
@@ -47,7 +62,13 @@ const Search = () => {
             { lyrics ? (
                 <div className={styles.search__lyrics}>
                     <h2>{params.song} - {params.artist}</h2>
-                    <div id="lyrics">{lyrics}</div>
+                    <div id="lyrics"></div>
+                    <input
+                        type="reset"
+                        className={styles.search__submit}
+                        value="Start Over"
+                        onClick={(e) => startOver(e)}
+                    />
                 </div>
             ) : null}
         </div>

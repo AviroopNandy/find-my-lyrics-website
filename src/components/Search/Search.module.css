@@ -1,3 +1,8 @@
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .search {
   width: 100vw;
 }
@@ -10,7 +15,8 @@
   align-items: center;
 }
 
-.search__searchbar > input {
+.search__searchbar > input,
+.search__lyrics > input {
   outline: none;
   border: none;
 }
@@ -48,4 +54,12 @@
 .search__submit:hover {
   background-color: #093c88;
   transition: all 200ms ease-in-out;
+}
+
+.search__lyrics > h2 {
+  padding-bottom: 20px;
+}
+
+.search__lyrics > .search__submit {
+  margin: 20px 0;
 }
