@@ -1,0 +1,51 @@
+.search {
+  width: 100vw;
+}
+
+.search__searchbar {
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__searchbar > input {
+  outline: none;
+  border: none;
+}
+
+.search__artist {
+  padding: 1rem 2rem;
+  color: #767b91;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 5px #e1e5ee;
+  -webkit-box-shadow: 0 0 10px 5px #e1e5ee;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.search__song {
+  padding: 1rem 2rem;
+  color: #767b91;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 5px #e1e5ee;
+  -webkit-box-shadow: 0 0 10px 5px #e1e5ee;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.search__submit {
+  padding: 1rem 2rem;
+  background-color: #0d6efd;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.search__submit:hover {
+  background-color: #093c88;
+  transition: all 200ms ease-in-out;
+}
