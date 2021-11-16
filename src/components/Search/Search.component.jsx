@@ -39,6 +39,9 @@ const Search = () => {
 
     return (
         <div className={styles.search}>
+            <div className={styles.search__header}>
+                Find My Lyrics - The Web Resource for Song Lyrics
+            </div>
             <div className={styles.search__searchbar}>
                 <input
                     type="text"
