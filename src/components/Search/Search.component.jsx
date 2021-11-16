@@ -40,7 +40,7 @@ const Search = () => {
     return (
         <div className={styles.search}>
             <div className={styles.search__header}>
-                Find My Lyrics - The Web Resource for Song Lyrics
+                <h1>Find My Lyrics - THE Web Resource for Song Lyrics</h1>
             </div>
             <div className={styles.search__searchbar}>
                 <input
