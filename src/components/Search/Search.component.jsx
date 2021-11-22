@@ -8,7 +8,7 @@ const Search = () => {
         artist: "",
         song: "",
     });
-    const [lyrics, setLyrics] = useState("");
+    const [lyrics, setLyrics] = useState();
 
     const submitParams = (e) => {
         e.preventDefault();
@@ -16,16 +16,18 @@ const Search = () => {
         axios.get(`https://api.lyrics.ovh/v1/${params.artist}/${params.song}`)
         .then(res => {
             if(res.status === 200) {
-                console.log(res.data.lyrics);
-                setLyrics(res.data.lyrics);
-                console.log("Lyrics:", lyrics);
-                var html = document.getElementById("lyrics");
-                html.innerHTML = res.data.lyrics.replace(/[\r\n]/g, '<br />');
+                createLyrics(res.data.lyrics);
             }
         })
         .catch(err => {
             alert(err);
         })
+    }
+
+    const createLyrics = async (lyrics) => {
+        await setLyrics(lyrics);
+        var html = document.getElementById("lyrics");
+        html.innerHTML = lyrics.replace(/[\r\n]/g, '<br />');
     }
 
     const startOver = (e) => {
