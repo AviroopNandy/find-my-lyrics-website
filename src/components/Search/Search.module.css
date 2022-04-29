@@ -76,6 +76,27 @@
 
   .search__searchbar {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+
+  .search__artist, .search__song {
+    padding: 1rem 10rem 1rem 2rem;
+    margin: 10px;
+  }
+
+  .search__submit {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search__artist, .search__song {
+    padding: 1rem 2rem;
+    margin: 7px 10px;
+  }
+
+  .search__submit {
+    padding: 0.85rem 1rem;
+    margin-top: 7px;
   }
 }
