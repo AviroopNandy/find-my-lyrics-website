@@ -100,3 +100,10 @@
     margin-top: 7px;
   }
 }
+
+@media (max-width: 400px) {
+  .search__searchbar {
+    transform: scale(0.85);
+    margin-top: -20px;
+  }
+}
